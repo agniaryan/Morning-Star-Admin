@@ -56,7 +56,7 @@ public class ReportController {
 				reportBean.setTotalNotPaidStudent("" + objectList.get(4));
 			}
 		}
-
+		System.out.println("Test log");
 		reportBean.setStudentClassList(MSUtil.populateClassList());
 		return new ModelAndView("report", "reportBean", reportBean);
 	}
