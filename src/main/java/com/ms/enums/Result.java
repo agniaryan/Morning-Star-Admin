@@ -6,7 +6,7 @@ package com.ms.enums;
 import com.ms.util.MSConstant;
 
 /**
- * @author Amit.Agnihotri
+ * @author Aryan.Agnihotri
  *
  */
 public enum Result {

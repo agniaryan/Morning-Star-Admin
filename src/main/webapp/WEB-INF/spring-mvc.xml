@@ -76,7 +76,7 @@
 	<!--- JPA transaction manager -->
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<!-- <property name="persistenceUnitName" value="amitjava_mscagroup" /> -->
+		<!-- <property name="persistenceUnitName" value="Aryanjava_mscagroup" /> -->
 		<property name="persistenceUnitName" value="ms" />
 		<property name="dataSource" ref="dataSource" />
 		<property name="jpaVendorAdapter">
@@ -96,7 +96,7 @@
 
 	<bean id="entityManagerFactoryReadOnly"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<!-- <property name="persistenceUnitName" value="amitjava_mscagroup" /> -->
+		<!-- <property name="persistenceUnitName" value="Aryanjava_mscagroup" /> -->
 		<property name="persistenceUnitName" value="ms" />
 		<property name="dataSource" ref="dataSourceReadOnly" />
 		<property name="jpaVendorAdapter">
@@ -119,7 +119,7 @@
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="${jdbc.url}" />
-		<!-- <property name="username" value="amitjava_msadmin" />
+		<!-- <property name="username" value="Aryanjava_msadmin" />
 		<property name="password" value="5ILx3l9O2m0h" />
 		 -->
 		<property name="username" value="${jdbc.username}" />
@@ -143,7 +143,7 @@
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="${jdbc.urlReadOnly}" />
-		<!-- <property name="username" value="amitjava_msadmin" />
+		<!-- <property name="username" value="Aryanjava_msadmin" />
 		<property name="password" value="5ILx3l9O2m0h" /> -->
 		
 		<property name="username" value="${jdbc.username}" />

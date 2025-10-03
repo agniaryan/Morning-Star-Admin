@@ -5,7 +5,7 @@
 
 	<!-- Default (No TreeCache) -->
 	<!-- -->
-	<!-- <persistence-unit name="amitjava_mscagroup"> -->
+	<!-- <persistence-unit name="Aryanjava_mscagroup"> -->
 	<persistence-unit name="ms">
 		<mapping-file>META-INF/ormdef.xml</mapping-file>
 			<class>com.ms.entity.User</class> 
