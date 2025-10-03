@@ -4,7 +4,7 @@
 package com.ms.enums;
 
 /**
- * @author Amit.Agnihotri
+ * @author Aryan.Agnihotri
  *
  */
 public enum ReportType {
