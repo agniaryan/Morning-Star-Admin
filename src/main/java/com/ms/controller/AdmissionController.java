@@ -1,5 +1,28 @@
 package com.ms.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
 import com.ms.bean.AdmissionFormBean;
 import com.ms.bean.ContactDetails;
 import com.ms.bean.StudentDetails;
@@ -13,26 +36,6 @@ import com.ms.service.RegistrationService;
 import com.ms.util.MSException;
 import com.ms.util.MSUtil;
 import com.ms.util.SessionUtil;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.Map.Entry;
-import javax.servlet.http.HttpServletRequest;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @Scope("request")
@@ -46,6 +49,7 @@ public class AdmissionController {
 	public ModelAndView admission(@ModelAttribute("admissionFormBean") AdmissionFormBean admissionFormBean,
 			BindingResult bindingResult, Model model, HttpServletRequest request) {
 		SessionUtil.setPage("Admission");
+		System.out.println("Admission form");
 		this.populateAdmissionFormBean(admissionFormBean);
 		admissionFormBean.setDiscountList(this.populateDiscounList());
 		StudentInfo bytes;
